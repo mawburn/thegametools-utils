@@ -6,7 +6,7 @@ export { SponsoredBy } from './components/SponsoredBy'
 export { TableGenerator } from './components/TableGenerator'
 export { HTag } from './components/HTag'
 export { NavBar } from './components/NavBar'
-
+export { useKey } from './utils/useKey'
 export { baseConfig } from './baseConfig'
 export { randomInt } from './utils/randomInt'
 export { rollOnTable } from './utils/rollOnTable'
