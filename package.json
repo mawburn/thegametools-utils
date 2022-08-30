@@ -12,7 +12,7 @@
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "peerDependencies": {
     "clsx": ">=1.1.1",
     "nanoid": ">=3.3.0",
