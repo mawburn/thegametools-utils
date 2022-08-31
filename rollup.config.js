@@ -2,46 +2,55 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
 import { terser } from 'rollup-plugin-terser'
-import externals from 'rollup-plugin-node-externals'
+import external from 'rollup-plugin-peer-deps-external'
 import postcss from 'rollup-plugin-postcss'
 import dts from 'rollup-plugin-dts'
-import image from '@rollup/plugin-image'
+import pkg from './package.json'
 
-const config = [
+export default [
   {
     input: 'src/index.ts',
+    external: ['react', 'react-dom', 'nanoid-dictionary', 'next', 'clsx', 'react-dom'],
     output: [
       {
-        file: 'dist/index.js',
-        sourcemap: true,
+        file: pkg.main,
         format: 'cjs',
+        sourcemap: true,
+        name: 'react-ts-lib',
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+          'nanoid-dictionary': 'nanoidDictionary',
+          next: 'next',
+          clsx: 'clsx',
+        },
       },
       {
-        file: 'dist/index.es.js',
-        format: 'es',
+        file: pkg.module,
+        format: 'esm',
         sourcemap: true,
-        exports: 'named',
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+          'nanoid-dictionary': 'nanoidDictionary',
+          next: 'next',
+          clsx: 'clsx',
+        },
       },
     ],
     plugins: [
-      externals({
-        deps: false,
-        include: [/^lodash/, /^next/],
-      }),
+      external(),
       resolve(),
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
+      postcss(),
       terser(),
-      image({ dom: true }),
-      postcss({ extract: true, autoModules: true }),
     ],
   },
   {
-    input: 'dist/index.d.ts',
+    input: 'dist/esm/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     external: [/\.css$/],
     plugins: [dts()],
   },
 ]
-
-export default config

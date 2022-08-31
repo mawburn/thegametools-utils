@@ -18,13 +18,10 @@
   "private": false,
   "peerDependencies": {
     "clsx": ">=1.2.1",
-    "nanoid-dictionary": ">=4.3.0",
+    "nanoid": ">=4.0.0",
     "next": ">=12.1.5",
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
-  },
-  "dependencies": {
-    "nanoid": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
@@ -44,7 +41,6 @@
     "@storybook/manager-webpack5": "^6.4.22",
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.13",
-    "@types/nanoid-dictionary": "^4.2.0",
     "@types/node": "^18.7.14",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
