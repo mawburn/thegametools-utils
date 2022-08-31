@@ -1,6 +1,6 @@
 {
   "name": "@thegametools/utils",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "type": "commonjs",
   "scripts": {
     "vercel": "yarn install",
@@ -10,7 +10,7 @@
     "lint:fix": "eslint --fix src/**/*.ts*"
   },
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "private": false,
