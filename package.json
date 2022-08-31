@@ -1,7 +1,6 @@
 {
   "name": "@thegametools/utils",
-  "version": "0.1.38",
-  "type": "commonjs",
+  "version": "0.1.39",
   "scripts": {
     "vercel": "yarn install",
     "build": "rm -rf dist && yarn version --patch && NODE_ENV=production rollup -c",
