@@ -10,7 +10,7 @@ import pkg from './package.json'
 export default [
   {
     input: 'src/index.ts',
-    external: ['react', 'react-dom', 'nanoid-dictionary', 'next', 'clsx', 'react-dom'],
+    external: ['react', 'react-dom', 'lodash', 'next', 'clsx', 'react-dom'],
     output: [
       {
         file: pkg.main,
@@ -20,7 +20,7 @@ export default [
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
-          'nanoid-dictionary': 'nanoidDictionary',
+          lodash: 'lodash',
           next: 'next',
           clsx: 'clsx',
         },
@@ -32,7 +32,7 @@ export default [
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
-          'nanoid-dictionary': 'nanoidDictionary',
+          lodash: 'lodash',
           next: 'next',
           clsx: 'clsx',
         },

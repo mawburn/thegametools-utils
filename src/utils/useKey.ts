@@ -1,12 +1,10 @@
-import { customAlphabet } from 'nanoid'
-import { alphanumeric } from 'nanoid-dictionary'
 import { useCallback, useMemo } from 'react'
+import uniqueId from 'lodash/uniqueId'
 
 export const useKey = <T>(list?: T[]) => {
   const keyPrefix = useMemo(() => {
     if (list) {
-      const nanoid = customAlphabet(alphanumeric, 10)
-      return nanoid()
+      return uniqueId('key')
     }
   }, [list])
 
