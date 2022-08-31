@@ -1,6 +1,6 @@
 {
   "name": "@thegametools/utils",
-  "version": "0.1.61",
+  "version": "0.1.62",
   "scripts": {
     "vercel": "yarn install",
     "build": "rm -rf dist && yarn version --patch && NODE_ENV=production rollup -c",
@@ -18,11 +18,13 @@
   "private": false,
   "peerDependencies": {
     "clsx": ">=1.2.1",
-    "nanoid": ">=4.0.0",
     "nanoid-dictionary": ">=4.3.0",
     "next": ">=12.1.5",
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
+  },
+  "dependencies": {
+    "nanoid": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
