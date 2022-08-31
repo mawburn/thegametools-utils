@@ -1,12 +1,13 @@
 {
   "name": "@thegametools/utils",
-  "version": "0.1.68",
+  "version": "0.1.69",
   "scripts": {
     "build": "rm -rf dist && yarn version --patch && NODE_ENV=production rollup -c",
     "storybook": "start-storybook -p 6006",
     "start": "yarn storybook",
     "build-storybook": "build-storybook",
-    "lint:fix": "eslint --fix src/**/*.ts*"
+    "lint:fix": "eslint --fix src/**/*.ts*",
+    "nuke": "rm -rf node_modules && rm yarn.lock && yarn install"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -63,7 +64,7 @@
     "prettier-eslint": "^15.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup": "^2.70.2",
+    "rollup": "^2.79.0",
     "rollup-plugin-dts": "^4.0.1",
     "rollup-plugin-node-externals": "^4.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
