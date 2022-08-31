@@ -1,4 +1,4 @@
-import React, { FC, Fragment, ReactNode } from 'react'
+import React, { PropsWithChildren, Fragment, ReactNode } from 'react'
 
 import { useKey } from '../../utils/useKey'
 
@@ -7,7 +7,7 @@ interface TableGeneratorProps {
   sectionClasses?: string | string[]
 }
 
-const Wrapper: FC<{ classes?: string }> = ({ classes, children }) =>
+const Wrapper = ({ classes, children }: PropsWithChildren<{ classes?: string }>) =>
   classes ? <section className={classes}>{children}</section> : <>{children}</>
 
 export const TableGenerator = ({ list = [], sectionClasses }: TableGeneratorProps) => {

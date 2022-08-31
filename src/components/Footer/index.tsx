@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { PropsWithChildren } from 'react'
 
 import { baseConfig } from '../../baseConfig'
 
@@ -8,11 +8,11 @@ export interface FooterProps {
   borderTop?: boolean
 }
 
-export const Footer: FC<FooterProps> = ({
+export const Footer = ({
   children = null,
   footerClasses = '',
   sectionClasses = '',
-}) => (
+}: PropsWithChildren<FooterProps>) => (
   <footer className={`text-sm max-w-2xl my-4 mx-auto ${footerClasses}`}>
     {children}
     <section className={`flex justify-center items-center mt-3 ${sectionClasses}`}>
