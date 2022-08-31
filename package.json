@@ -1,6 +1,6 @@
 {
   "name": "@thegametools/utils",
-  "version": "0.1.42",
+  "version": "0.1.43",
   "scripts": {
     "vercel": "yarn install",
     "build": "rm -rf dist && yarn version --patch && NODE_ENV=production rollup -c",
@@ -8,8 +8,9 @@
     "build-storybook": "build-storybook",
     "lint:fix": "eslint --fix src/**/*.ts*"
   },
-  "main": "dist/index.js",
+  "main": "dist/index.m.js",
   "module": "dist/index.m.js",
+  "browser": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "private": false,
