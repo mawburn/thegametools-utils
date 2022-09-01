@@ -12,14 +12,11 @@ jobs:
       - name: git-checkout
         uses: actions/checkout@v2
 
-      - name: set-user
-        run: git config --global user.email "mawburn7@gmail.com"
-
       - name: Install all dependencies
         run: yarn install
 
       - name: Build
-        run: yarn build # The build command of your project
+        run: yarn build
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop

@@ -1,8 +1,10 @@
 {
   "name": "@thegametools/utils",
-  "version": "0.1.92",
+  "version": "0.3.1",
   "scripts": {
-    "build": "rm -rf dist && yarn version --patch && NODE_ENV=production rollup -c",
+    "prebuild": "yarn nuke",
+    "build": "rm -rf dist && yarn version --patch --no-git-tag-version && NODE_ENV=production rollup -c",
+    "postbuild": "rm -rf node_modules && npm install --package-lock=false",
     "storybook": "start-storybook -p 6006",
     "start": "yarn storybook",
     "build-storybook": "build-storybook",
@@ -46,8 +48,8 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/lodash": "^4.14.184",
     "@types/node": "^18.7.14",
-    "@types/react": "18.0.18",
-    "@types/react-dom": "18.0.6",
+    "@types/react": "^18.0.18",
+    "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.4",
     "babel-loader": "^8.2.3",
     "eslint": "^8.5.0",

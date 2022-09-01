@@ -18,10 +18,10 @@ export default [
         sourcemap: true,
         name: 'react-ts-lib',
         globals: {
-          react: 'react',
-          'react-dom': 'reactDOM',
+          react: 'React',
+          'react-dom': 'ReactDOM',
           lodash: 'lodash',
-          next: 'next',
+          next: 'next/link',
           clsx: 'clsx',
         },
       },
