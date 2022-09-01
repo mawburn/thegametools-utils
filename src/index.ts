@@ -1,5 +1,3 @@
-import './styles.css'
-
 export { Footer } from './components/Footer'
 export { Github } from './components/Github'
 export { SponsoredBy } from './components/SponsoredBy'

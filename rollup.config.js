@@ -10,7 +10,7 @@ import pkg from './package.json'
 export default [
   {
     input: 'src/index.ts',
-    external: ['react', 'react-dom', 'lodash', 'next', 'clsx', 'react-dom'],
+    external: ['react', 'react-dom', 'lodash', 'next', 'clsx'],
     output: [
       {
         file: pkg.main,
@@ -18,20 +18,8 @@ export default [
         sourcemap: true,
         name: 'react-ts-lib',
         globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-          lodash: 'lodash',
-          next: 'next',
-          clsx: 'clsx',
-        },
-      },
-      {
-        file: pkg.module,
-        format: 'esm',
-        sourcemap: true,
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
+          react: 'react',
+          'react-dom': 'reactDOM',
           lodash: 'lodash',
           next: 'next',
           clsx: 'clsx',
@@ -43,12 +31,16 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: './tsconfig.json' }),
-      postcss(),
+      postcss({
+        modules: true,
+        extract: true,
+        minimize: true,
+      }),
       terser(),
     ],
   },
   {
-    input: 'dist/esm/index.d.ts',
+    input: 'dist/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     external: [/\.css$/],
     plugins: [dts()],
