@@ -12,6 +12,10 @@ jobs:
       - name: git-checkout
         uses: actions/checkout@v2
 
+      - name: set-user
+        run: git config --global user.email "mawburn7@gmail.com"
+        run: git config --global user.name "mawburn"
+
       - name: Install all dependencies
         run: yarn install
 
@@ -23,6 +27,6 @@ jobs:
         env:
           REPO: self
           BRANCH: build # The branch name where you want to push the assets
-          FOLDER: build # The directory where your assets are generated
+          FOLDER: dist # The directory where your assets are generated
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: 'Build: ({sha}) {msg}' # The commit message
