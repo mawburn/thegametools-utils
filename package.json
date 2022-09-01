@@ -1,6 +1,6 @@
 {
   "name": "@thegametools/utils",
-  "version": "0.1.84",
+  "version": "0.1.85",
   "scripts": {
     "build": "rm -rf dist && yarn version --patch && NODE_ENV=production rollup -c",
     "storybook": "start-storybook -p 6006",
