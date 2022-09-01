@@ -14,7 +14,6 @@ jobs:
 
       - name: set-user
         run: git config --global user.email "mawburn7@gmail.com"
-        run: git config --global user.name "mawburn"
 
       - name: Install all dependencies
         run: yarn install
