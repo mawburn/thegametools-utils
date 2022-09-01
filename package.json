@@ -1,16 +1,15 @@
 {
   "name": "@thegametools/utils",
-  "version": "0.1.83",
+  "version": "0.1.84",
   "scripts": {
-    "build": "rm -rf dist && rm -rf node_modules && yarn install --production && yarn version --patch && NODE_ENV=production rollup -c && yarn install",
+    "build": "rm -rf dist && yarn version --patch && NODE_ENV=production rollup -c",
     "storybook": "start-storybook -p 6006",
     "start": "yarn storybook",
     "build-storybook": "build-storybook",
     "lint:fix": "eslint --fix src/**/*.ts*",
     "nuke": "rm -rf node_modules && rm yarn.lock && yarn install"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
