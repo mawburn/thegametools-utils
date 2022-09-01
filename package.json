@@ -4,9 +4,9 @@
   "scripts": {
     "prebuild": "yarn nuke",
     "build": "rm -rf dist && yarn version --patch --no-git-tag-version && NODE_ENV=production rollup -c",
-    "postbuild": "rm -rf node_modules && npm install --package-lock=false",
+    "install:all": "rm -rf node_modules && npm install --package-lock=false",
     "storybook": "start-storybook -p 6006",
-    "start": "yarn storybook",
+    "dev": "yarn storybook",
     "build-storybook": "build-storybook",
     "lint:fix": "eslint --fix src/**/*.ts*",
     "nuke": "rm -rf node_modules && rm yarn.lock && yarn install"
