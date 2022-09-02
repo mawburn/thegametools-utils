@@ -2,9 +2,13 @@ import React from 'react'
 
 import styles from './styles.module.css'
 
-export const Github = () => (
+interface GithubProps {
+  repo: string
+}
+
+export const Github = ({ repo }: GithubProps) => (
   <a
-    href="https://github.com/mawburn/thegame.tools"
+    href={`https://github.com/mawburn/${repo}`}
     className={styles.githubCorner}
     rel="noopener"
     aria-label="View source on GitHub"
