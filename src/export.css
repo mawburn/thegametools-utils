@@ -2,7 +2,7 @@
     font-family:"Coolvetica";
     src: url("https://cdn.tabletop.media/fonts/CoolveticaBold.woff2") format("woff2"),
          url("https://cdn.tabletop.media/fonts/CoolveticaBold.woff") format("woff");
-    font-display:auto;
+    font-display: swap;
     font-style:normal;
     font-weight:700;
     font-stretch:normal;
@@ -12,7 +12,7 @@
     font-family:"Coolvetica";
     src: url("https://cdn.tabletop.media/fonts/Coolvetica.woff2") format("woff2"),
          url("https://cdn.tabletop.media/fonts/Coolvetica.woff") format("woff");
-    font-display:auto;
+    font-display: swap;
     font-style:normal;
     font-weight:400;
     font-stretch:normal;
