@@ -21,7 +21,7 @@ export default [
           react: 'React',
           'react-dom': 'ReactDOM',
           lodash: 'lodash',
-          next: 'next/link',
+          next: 'next',
           clsx: 'clsx',
         },
       },

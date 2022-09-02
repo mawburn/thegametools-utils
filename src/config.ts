@@ -1,5 +1,5 @@
-export const baseConfig = {
-  imgBucket: 'https://cdn.tabletop.media/thegame.tools/',
+export const config = {
+  cdn: 'https://cdn.tabletop.media/thegame.tools',
   twitter: '@_mawburn',
   instagram: '@_mawburn',
   homepage: 'https://mawburn.com',

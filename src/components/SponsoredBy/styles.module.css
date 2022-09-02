@@ -1,0 +1,11 @@
+.colorBg {
+  @apply bg-ttl;
+}
+
+.fontFamily {
+  @apply font-ttl;
+}
+
+.fontColor {
+  @apply text-ttlFont;
+}

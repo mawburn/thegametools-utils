@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 import { NavBar } from './'
 
@@ -23,6 +24,6 @@ const links = [
 
 export const Basic = () => (
   <div className="border border-black">
-    <NavBar links={links} />
+    <NavBar image={Image} links={links} showRight />
   </div>
 )

@@ -2,7 +2,7 @@
 const config = {
   reactStrictMode: true,
   images: {
-    domains: ['*.thegame.tools', 'thegame.tools', 'cdn.tabletop.media'],
+    domains: ['cdn.tabletop.media'],
   },
 }
 

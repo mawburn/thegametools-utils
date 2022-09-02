@@ -1,6 +1,6 @@
 {
   "name": "@thegametools/utils",
-  "version": "0.3.1",
+  "version": "0.3.11",
   "scripts": {
     "prebuild": "yarn nuke",
     "build": "rm -rf dist && yarn version --patch --no-git-tag-version && NODE_ENV=production rollup -c",
@@ -19,7 +19,8 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "nanoid": "4.0.0"
+    "nanoid": "4.0.0",
+    "storybook-css-modules": "^1.0.8"
   },
   "peerDependencies": {
     "clsx": "^1.2.1",
