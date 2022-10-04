@@ -17,7 +17,7 @@ export const MetaData = ({
   descr,
   title = 'TheGame.Tools',
   ogImg = OGIMG_STATIC,
-  twitter = '@_mawburn',
+  twitter = config.twitter,
   author = 'hypnoCode',
 }: PropsWithChildren<MetaDataProps>) => (
   <>
@@ -26,6 +26,7 @@ export const MetaData = ({
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charSet="utf-8" />
     <meta name="description" content={descr} />
+    <meta name="og:description" content={descr} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={descr} />
     <meta property="og:image" content={ogImg} />
@@ -35,10 +36,8 @@ export const MetaData = ({
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={descr} />
     <meta name="twitter:image" content={ogImg} />
-    <meta name="twitter:card" content="summary" />
-    <meta name="description" content={descr} />
-    <meta name="og:description" content={descr} />
-    <meta name="twitter:creator" content={`${twitter ?? config.twitter}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content={`${twitter}`} />
     <link rel="preconnect" href="https://cdn.tabletop.media" crossOrigin="true" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
