@@ -3,7 +3,7 @@
 }
 
 .footer a, .footer a:visited, .footer a:active  {
-  @apply font-semibold no-underline cursor-pointer;
+  @apply font-semibold no-underline cursor-pointer whitespace-nowrap;
 }
 
 .footer a:hover {
