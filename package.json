@@ -1,6 +1,6 @@
 {
   "name": "@thegametools/utils",
-  "version": "0.3.14",
+  "version": "0.3.15",
   "scripts": {
     "prebuild": "yarn nuke",
     "build": "rm -rf dist && yarn version --patch --no-git-tag-version && NODE_ENV=production rollup -c",
